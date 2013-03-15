@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load story_extras %}
+
+{% block head %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{{STATIC_URL}}js/vote.js"></script>
+{% endblock %}
+
+
+{% block content %}
+<ol>
+  {% for story in stories %}
+  <li> 
+    <div class="story">
+      {% if user.is_authenticated and story not in liked_stories %}
+        <a href="{% url 'vote' %}" class="uparrow" id="story-vote-{{ story.id }}">&#x25b2;</a>
+        <a href="{{ story.url }}" id="story-title-{{ story.id}}">{{ story.title }}  <span class="domain">({{ story.domain }})</span></a>
+      {% else %}
+        <a href="{{ story.url }}" style="margin-left: 30px;" id="story-title-{{ story.id}}">{{ story.title }}  <span class="domain">({{ story.domain }})</span></a>
+      {% endif %}
+      <p> {{ story.points }} point{{story.points|pluralize}} by <strong>{{ story.moderator.username }}</strong> | {{ story.created_at|age }} </p>
+      <!-- <a href="#" class="downarrow">&#x25bc;</a> -->
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+{% endblock %}

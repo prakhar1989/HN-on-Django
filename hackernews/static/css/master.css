@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: 'PT Sans', sans-serif;
+  border-bottom: 10px solid #de3543;
+  padding-bottom: 50px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.domain {
+  color: #444;
+  font-size: 12px;
+}
+p {
+  margin: 0;
+  padding: 0;
+  color: #444;
+  font-size: 14px;
+  margin-left: 30px;
+  margin-top: 8px;
+}
+div.story {
+  padding: 10px;
+  margin-top: 10px;
+}
+div.container {
+  width: 800px;
+  margin: 0px auto;
+}
+.uparrow {
+  margin-right: 10px;
+  color: #888;
+}
+.downarrow {
+  position: relative;
+  top: -18px;
+}
+header{
+  background: #de3543;
+  padding: 10px 0px;
+}
+header h1 {
+  font-size: 20px;
+  color: white;
+}
+
+header a {
+  color : white;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  border: 1px solid white;
+  padding: 2px 5px;
+  margin-right: 20px;
+}
+
+table tr {
+  height: 60px;
+}
+
+input[type=text], input[type=password]{
+  width: 400px;
+  padding: 8px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(51, 51, 51);
+  font-size: 14px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  font-family: 'PT Sans';
+}
+
+input[type=submit] {
+  padding: 10px;
+  width: 100px;
+  background: #de3543;
+  border: none;
+  color: white;
+  border-radius: 4px;
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+}
+
+.nav {
+  float: right;
+  margin-top: -25px;
+}
+
+.nav a {
+  color: white;
+  font-size: 12px;
+}
+
+.nav ul {
+  list-style-type: none;
+}
+
+.nav ul li {
+  float: left;
+  margin-right: 20px;
+}
+
+.errorlist {
+  list-style-type: none;
+  color: red;
+  font-size: 12px;
+}
